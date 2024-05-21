@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">ChinescopApp</string>
+    <string name="app_name">CINESCOPE</string>
+    <color name="bottom_nav_item_color">#FF4081</color>
+        <string name="app_name">MyApp</string>
+        <string name="keluarga_cemara">Keluarga Cemara</string>
+        <string name="buya_hamka">Buya Hamka</string>
+        <string name="shadow_and_bone">Shadow And Bone</string>
+        <string name="film_keempat">Film Keempat</string>
+        <string name="film_kelima">Film Kelima</string>
+        <string name="film_keenam">Film Keenam</string>
+        <string name="synopsis_film_1">Sinopsis film 1</string>
+        <string name="synopsis_film_2">Sinopsis film 2</string>
+        <string name="synopsis_film_3">Sinopsis film 3</string>
+        <string name="synopsis_film_4">Sinopsis film 4</string>
+        <string name="synopsis_film_5">Sinopsis film 5</string>
+        <string name="synopsis_film_6">Sinopsis film 6</string>
+
+</resources>

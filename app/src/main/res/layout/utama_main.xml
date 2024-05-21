@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HalamanUtama"
+    android:background="#FF00FF">
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/nav_host_fragment"
+        android:name="androidx.navigation.fragment.NavHostFragment"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/bottom_navigation"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:navGraph="@navigation/nav_graph" />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        app:menu="@menu/bottom_navigation_menu"
+        app:itemIconTint="@color/bottom_nav_item_color"
+        app:itemTextColor="@color/bottom_nav_item_color"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <LinearLayout
+        android:id="@+id/firstRowLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/bottom_navigation"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp">
+
+        <!-- Layout untuk poster pertama -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="4dp"
+            app:cardCornerRadius="8dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="8dp">
+
+                <ImageView
+                    android:id="@+id/movieImageView1"
+                    android:layout_width="match_parent"
+                    android:layout_height="149dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/poster1" />
+
+                <TextView
+                    android:id="@+id/titleTextView1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Keluarga Cemara"
+                    android:textStyle="bold"
+                    android:textSize="18sp"/>
+
+                <TextView
+                    android:id="@+id/synopsisTextView1"
+                    android:layout_width="match_parent"
+                    android:layout_height="76dp"
+                    android:maxLines="3"
+                    android:text="ABAH (35/Ringgo Agus Rahman), sangat ingin bertahan setelah rumah dan pasca hartanya disita oleh debt collector untuk membayar hutang perusahaan yang disebabkan oleh kakak iparnya, dengan cara pindah sementara ke rumah di desa terpencil di Jawa Barat. Rumah itu merupakan rumah masa kecilnya, sebuah warisan dari ayahnya. Namun dia menghadapi kesulitan karena kasusnya kalah di pengadilan dan keluarganya terancam selamanya hidup dalam kemiskinan di desa itu." />
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <!-- Layout untuk poster kedua -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="4dp"
+            android:layout_marginEnd="4dp"
+            app:cardCornerRadius="8dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="8dp">
+
+                <ImageView
+                    android:id="@+id/movieImageView2"
+                    android:layout_width="match_parent"
+                    android:layout_height="149dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/poster2" />
+
+                <TextView
+                    android:id="@+id/titleTextView2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Buya Hamka"
+                    android:textStyle="bold"
+                    android:textSize="18sp"/>
+
+                <TextView
+                    android:id="@+id/synopsisTextView2"
+                    android:layout_width="match_parent"
+                    android:layout_height="76dp"
+                    android:maxLines="3"
+                    android:text="Film biografi ini mengisahkan perjalanan hidup Abdul Malik Karim Amrullah, yang lebih dikenal sebagai Buya Hamka, seorang ulama, penulis, dan politisi terkemuka Indonesia. Cerita ini mencakup perjuangan Buya Hamka dalam menyebarkan ajaran Islam, menulis karya sastra yang berpengaruh, serta kontribusinya dalam politik dan sosial di Indonesia. Film ini juga menggambarkan sisi kemanusiaan Buya Hamka yang penuh dengan tantangan, pengorbanan, dan ketulusan." />
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <!-- Layout untuk poster ketiga -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="4dp"
+            android:layout_marginEnd="8dp"
+            app:cardCornerRadius="8dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="8dp">
+
+                <ImageView
+                    android:id="@+id/movieImageView3"
+                    android:layout_width="match_parent"
+                    android:layout_height="149dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/poster3" />
+
+                <TextView
+                    android:id="@+id/titleTextView3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Shadow And Bone"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/synopsisTextView3"
+                    android:layout_width="match_parent"
+                    android:layout_height="76dp"
+                    android:maxLines="3"
+                    android:text="Berdasarkan novel trilogi Grisha karya Leigh Bardugo, serial ini mengikuti Alina Starkov, seorang yatim piatu yang menemukan bahwa ia memiliki kekuatan magis luar biasa yang dapat mengubah nasib dunia yang dilanda perang. Saat Alina berusaha memahami dan mengendalikan kekuatannya, ia harus menghadapi ancaman dari pasukan kegelapan yang ingin memanfaatkan kekuatannya untuk tujuan jahat. Serial ini dipenuhi dengan elemen fantasi, intrik politik, dan petualangan yang mendebarkan." />
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/secondRowLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/firstRowLayout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp">
+
+        <!-- Layout untuk poster keempat -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView4"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="4dp"
+            app:cardCornerRadius="8dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="8dp">
+
+                <ImageView
+                    android:id="@+id/movieImageView4"
+                    android:layout_width="match_parent"
+                    android:layout_height="149dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/poster4" />
+
+                <TextView
+                    android:id="@+id/titleTextView4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Archer"
+                    android:textStyle="bold"
+                    android:textSize="18sp"/>
+
+                <TextView
+                    android:id="@+id/synopsisTextView4"
+                    android:layout_width="match_parent"
+                    android:layout_height="76dp"
+                    android:maxLines="3"
+                    android:text="Serial animasi komedi ini mengikuti kehidupan Sterling Archer, seorang agen rahasia yang bekerja di agensi mata-mata fiktif, International Secret Intelligence Service (ISIS). Dikenal dengan kepribadiannya yang narsistik dan perilakunya yang sembrono, Archer sering kali terlibat dalam berbagai misi berbahaya dan situasi konyol bersama rekan-rekannya yang unik. Serial ini terkenal dengan humornya yang sarkastik dan dialog yang tajam." />
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <!-- Layout untuk poster kelima -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView5"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="4dp"
+            android:layout_marginEnd="4dp"
+            app:cardCornerRadius="8dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="8dp">
+
+                <ImageView
+                    android:id="@+id/movieImageView5"
+                    android:layout_width="match_parent"
+                    android:layout_height="149dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/poster5" />
+
+                <TextView
+                    android:id="@+id/titleTextView5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Terminator"
+                    android:textStyle="bold"
+                    android:textSize="18sp"/>
+
+                <TextView
+                    android:id="@+id/synopsisTextView5"
+                    android:layout_width="match_parent"
+                    android:layout_height="76dp"
+                    android:maxLines="3"
+                    android:text="Franchise film ini berpusat pada perang antara manusia dan mesin. Cerita dimulai dengan Skynet, sebuah sistem kecerdasan buatan yang menjadi sadar diri dan memulai perang nuklir untuk memusnahkan umat manusia. Dalam upaya untuk mengubah nasib manusia, perlawanan mengirim pejuang ke masa lalu untuk melindungi John Connor, pemimpin masa depan manusia. Film ini menampilkan pertarungan epik antara cyborg Terminator yang dikirim oleh Skynet dan para pejuang dari masa depan yang berusaha mencegah kehancuran." />
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <!-- Layout untuk poster keenam -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView6"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="4dp"
+            android:layout_marginEnd="8dp"
+            app:cardCornerRadius="8dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="8dp">
+
+                <ImageView
+                    android:id="@+id/movieImageView6"
+                    android:layout_width="match_parent"
+                    android:layout_height="149dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/poster6" />
+
+                <TextView
+                    android:id="@+id/titleTextView6"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Asal Kau Bahagia"
+                    android:textStyle="bold"
+                    android:textSize="18sp"/>
+
+                <TextView
+                    android:id="@+id/synopsisTextView6"
+                    android:layout_width="match_parent"
+                    android:layout_height="76dp"
+                    android:maxLines="3"
+                    android:text="Film drama romantis ini bercerita tentang kisah cinta Ali dan Aurora. Ali, seorang pemuda yang baik hati, mengalami kecelakaan dan koma. Selama koma, roh Ali dapat berkelana di alam astral dan berkomunikasi dengan Aurora, seorang wanita yang dia cintai. Namun, setelah Ali terbangun dari komanya, dia harus mencari cara untuk menemukan Aurora di dunia nyata. Kisah mereka dipenuhi dengan perjuangan, kesetiaan, dan pengorbanan demi cinta sejati." />
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
